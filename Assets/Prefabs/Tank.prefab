@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 5574027160252036834}
   - component: {fileID: 5479162301865369728}
   - component: {fileID: 8630060938640891407}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: tank
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -93,7 +93,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2686100645292374879}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: CameraDirection
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -128,7 +128,7 @@ GameObject:
   - component: {fileID: 1757248859622447411}
   - component: {fileID: 8435104869266307035}
   - component: {fileID: 9164393809954566474}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: platform
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -228,7 +228,7 @@ GameObject:
   - component: {fileID: 4707315220664884994}
   - component: {fileID: 8897045313386774667}
   - component: {fileID: 3604008531774432999}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: connon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -309,7 +309,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 246671949312299106}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: FireDirection
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -342,7 +342,7 @@ GameObject:
   - component: {fileID: 4665843748425543919}
   - component: {fileID: 8249304809828211440}
   - component: {fileID: 5979084705699519908}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Main Camera
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
@@ -435,9 +435,10 @@ GameObject:
   - component: {fileID: 8619035119627105054}
   - component: {fileID: 6109358379209783198}
   - component: {fileID: 3341684486319243012}
-  m_Layer: 0
+  - component: {fileID: 1009442297404142036}
+  m_Layer: 6
   m_Name: Tank
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -524,6 +525,20 @@ MonoBehaviour:
   tankDirection: {fileID: 4922171116283296157}
   speed: 2
   rotspeed: 0.3
+--- !u!114 &1009442297404142036
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7129558278269318837}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d245b058e7e086d48a9fda421ca772f5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bulletPrefab: {fileID: 5545145166884689891, guid: aa5fa2a4dd9e0b44892ac1ee7f148e7f, type: 3}
+  fireDirection: {fileID: 246671949312299106}
 --- !u!1 &8160121867831543177
 GameObject:
   m_ObjectHideFlags: 0
@@ -533,7 +548,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5431640719086945139}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: PlatDirection
   m_TagString: Untagged
   m_Icon: {fileID: 0}

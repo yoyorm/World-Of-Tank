@@ -12,6 +12,7 @@ public class PlayerInput : MonoBehaviour
     private float  _rotx=0;
     private float _roty=0;
     private float _horizontalRot=0;
+    public static event System.Action OnFire;   //创建静态事件
     
     void Start()
     {
@@ -25,6 +26,7 @@ public class PlayerInput : MonoBehaviour
     {
         ViewMovement();
         Movement();
+        Fire();
     }
 
     void ViewMovement() //视野移动
@@ -49,5 +51,13 @@ public class PlayerInput : MonoBehaviour
 
         _horizontalRot += Input.GetAxis("Horizontal")*rotspeed;
         transform.rotation = Quaternion.Euler(transform.rotation.x,_horizontalRot,transform.rotation.z);
+    }
+
+    void Fire()
+    {
+        if (Input.GetMouseButtonDown(0))
+        {
+            OnFire?.Invoke();
+        }
     }
 }
