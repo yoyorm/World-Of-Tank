@@ -8,6 +8,7 @@ public class BulletMove : MonoBehaviour
 {
     private ObjectPool<GameObject> bulletPool;  //引用对象池
     public float bulletSpeed=120;
+    public int bulletDamage=30;
     public void SetPool(ObjectPool<GameObject> pool)=>bulletPool=pool;  //建立方法从外部引用对象池
     private float timer=0;
 
@@ -28,5 +29,10 @@ public class BulletMove : MonoBehaviour
     void OnCollisionEnter(Collision other)  //子弹碰撞释放
     {
         bulletPool.Release(this.gameObject);
+        Enemy enemy= other.gameObject.GetComponent<Enemy>();
+        if (enemy)
+        {
+            enemy.TakeDamage(bulletDamage);
+        }
     }
 }

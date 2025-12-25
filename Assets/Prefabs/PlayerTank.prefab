@@ -437,7 +437,7 @@ GameObject:
   - component: {fileID: 3341684486319243012}
   - component: {fileID: 1009442297404142036}
   m_Layer: 6
-  m_Name: Tank
+  m_Name: PlayerTank
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -522,9 +522,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerCamera: {fileID: 1233441759259109198}
-  tankDirection: {fileID: 4922171116283296157}
-  speed: 2
-  rotspeed: 0.3
+  tankDirection: {fileID: 7129558278269318837}
+  speed: 3
+  rotspeed: 0.25
 --- !u!114 &1009442297404142036
 MonoBehaviour:
   m_ObjectHideFlags: 0
