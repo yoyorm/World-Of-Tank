@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Pool;
+using UnityEngine.UI;
 
 //该组件在于实现子弹的对象池和开火
 
@@ -12,14 +13,25 @@ public class WeaponControl : MonoBehaviour
     public GameObject bulletPrefab;
     private ObjectPool<GameObject> bulletPool;
     public Transform fireDirection;
-    
-    
+    GameObject tank ;
+    Rigidbody tankRigidbody;
+    public float shootTime = 3;
+    private float timeCount;
+    public Slider shootInterval;
+    public AudioSource fireSound;
+    public float soundSize = 0.3f;
+    private float soundCount=0;
     void Start()
     {
         bulletPool = new ObjectPool<GameObject>(createFunc,actionOnGet,actionOnRelease,actionOnDestroy,true,5,5);
         PlayerInput.OnFire += Fire;             //注册开火函数给事件
+        tank = fireDirection.parent.gameObject;
+        tankRigidbody = tank.GetComponent<Rigidbody>();
+        timeCount=shootTime;
+        shootInterval.value = timeCount;
+        soundCount=soundSize;
     }
-
+    
     GameObject createFunc()
     {
         GameObject bullet=GameObject.Instantiate(bulletPrefab); //子弹实例化
@@ -48,9 +60,36 @@ public class WeaponControl : MonoBehaviour
     
     private void Fire()
     {
-            GameObject bullet=bulletPool.Get();         
+        if (timeCount<=0)
+        {
+            soundCount = soundSize;
+            fireSound.Play();
+            GameObject bullet = bulletPool.Get();
+            timeCount = shootTime;
+            tankRigidbody.AddForce(-fireDirection.forward * 800, ForceMode.Impulse); //增加开火后坐力
+        }
     }
 
+    void Update()
+    {
+        if(timeCount>0)
+            timeCount -= Time.deltaTime;
+        else
+        {
+            timeCount = 0;
+            
+        }
+        if(soundCount>0)
+            soundCount -= Time.deltaTime/1.5f;
+        else
+        {
+            soundCount = 0;
+            
+        }
+        fireSound.volume = soundCount;
+        shootInterval.value = timeCount;
+    }
+    
     private void OnDestroy()
     {
         PlayerInput.OnFire -= Fire;

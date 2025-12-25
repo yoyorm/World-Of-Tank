@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 5574027160252036834}
   - component: {fileID: 5479162301865369728}
   - component: {fileID: 8630060938640891407}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: tank
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -93,7 +93,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2686100645292374879}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: CameraDirection
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -127,7 +127,7 @@ GameObject:
   - component: {fileID: 1757248859622447411}
   - component: {fileID: 8435104869266307035}
   - component: {fileID: 9164393809954566474}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: platform
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -227,7 +227,7 @@ GameObject:
   - component: {fileID: 4707315220664884994}
   - component: {fileID: 8897045313386774667}
   - component: {fileID: 3604008531774432999}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: connon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -308,7 +308,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 246671949312299106}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: FireDirection
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -342,9 +342,9 @@ GameObject:
   - component: {fileID: 8619035119627105054}
   - component: {fileID: 6109358379209783198}
   - component: {fileID: 5824154001112633601}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: EnemyTank
-  m_TagString: Player
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -438,7 +438,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5431640719086945139}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: PlatDirection
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -29,7 +29,7 @@ public class BulletMove : MonoBehaviour
     void OnCollisionEnter(Collision other)  //子弹碰撞释放
     {
         bulletPool.Release(this.gameObject);
-        Enemy enemy= other.gameObject.GetComponent<Enemy>();
+        Tank enemy= other.gameObject.GetComponent<Tank>();
         if (enemy)
         {
             enemy.TakeDamage(bulletDamage);
