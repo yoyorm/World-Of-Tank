@@ -438,6 +438,7 @@ GameObject:
   - component: {fileID: 1009442297404142036}
   - component: {fileID: 4373969563475054061}
   - component: {fileID: 6677743347724293484}
+  - component: {fileID: 7213636636397468935}
   m_Layer: 6
   m_Name: PlayerTank
   m_TagString: Player
@@ -525,8 +526,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerCamera: {fileID: 1233441759259109198}
   tankDirection: {fileID: 7129558278269318837}
-  speed: 2.5
-  rotspeed: 0.3
+  speed: 1.6
+  rotspeed: 0.24
 --- !u!114 &1009442297404142036
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -542,7 +543,7 @@ MonoBehaviour:
   bulletPrefab: {fileID: 5545145166884689891, guid: aa5fa2a4dd9e0b44892ac1ee7f148e7f, type: 3}
   fireDirection: {fileID: 246671949312299106}
   shootTime: 1
-  shootInterval: {fileID: 0}
+  timeCount: 0
   fireSound: {fileID: 6677743347724293484}
   soundSize: 1
 --- !u!114 &4373969563475054061
@@ -655,6 +656,20 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &7213636636397468935
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7129558278269318837}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9974c4bcaa0ea204888801329ae71496, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shootInterval: {fileID: 0}
+  hp: {fileID: 0}
 --- !u!1 &8160121867831543177
 GameObject:
   m_ObjectHideFlags: 0

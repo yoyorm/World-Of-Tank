@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Pool;
-using UnityEngine.UI;
+
 
 //该组件在于实现子弹的对象池和开火
 
@@ -16,8 +16,7 @@ public class WeaponControl : MonoBehaviour
     GameObject tank ;
     Rigidbody tankRigidbody;
     public float shootTime = 3;
-    private float timeCount;
-    public Slider shootInterval;
+    public float timeCount;
     public AudioSource fireSound;
     public float soundSize = 0.3f;
     private float soundCount=0;
@@ -28,7 +27,6 @@ public class WeaponControl : MonoBehaviour
         tank = fireDirection.parent.gameObject;
         tankRigidbody = tank.GetComponent<Rigidbody>();
         timeCount=shootTime;
-        shootInterval.value = timeCount;
         soundCount=soundSize;
     }
     
@@ -87,7 +85,6 @@ public class WeaponControl : MonoBehaviour
             
         }
         fireSound.volume = soundCount;
-        shootInterval.value = timeCount;
     }
     
     private void OnDestroy()
