@@ -19,6 +19,7 @@ public class Enemy : MonoBehaviour
     {
         player = GameObject.FindGameObjectWithTag("Player");
         timer = FireInterval;
+        cameraTransform.rotation = Quaternion.Euler(cameraTransform.rotation.eulerAngles.x+20, cameraTransform.rotation.eulerAngles.y, cameraTransform.rotation.eulerAngles.z);
     }
 
     

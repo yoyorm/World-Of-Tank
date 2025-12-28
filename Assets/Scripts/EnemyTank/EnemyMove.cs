@@ -7,6 +7,7 @@ public class EnemyMove : MonoBehaviour
 {
     public float MoveSpeed = 1;
     public float MoveTime = 3;
+    public float RandomRange = 1f;
     private float timer = 0;
     int direction = 1;
     Rigidbody rb;
@@ -18,13 +19,14 @@ public class EnemyMove : MonoBehaviour
 
     void Update()
     {
+        
         if (timer > 0)
         {
             timer -= Time.deltaTime;
         }
         else
         {
-            timer = MoveTime;
+            timer = MoveTime+UnityEngine.Random.Range(-RandomRange, RandomRange);
             direction = -direction;
         }
     }

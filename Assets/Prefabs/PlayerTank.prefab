@@ -527,7 +527,7 @@ MonoBehaviour:
   playerCamera: {fileID: 1233441759259109198}
   tankDirection: {fileID: 7129558278269318837}
   speed: 1.6
-  rotspeed: 0.24
+  rotspeed: 0.8
 --- !u!114 &1009442297404142036
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -542,7 +542,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bulletPrefab: {fileID: 5545145166884689891, guid: aa5fa2a4dd9e0b44892ac1ee7f148e7f, type: 3}
   fireDirection: {fileID: 246671949312299106}
-  shootTime: 1
+  shootTime: 1.8
   timeCount: 0
   fireSound: {fileID: 6677743347724293484}
   soundSize: 1

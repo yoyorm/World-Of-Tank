@@ -25,8 +25,13 @@ public class PlayerInput : MonoBehaviour
     void Update()
     {
         ViewMovement();
-        Movement();
         Fire();
+        Pause();
+    }
+
+    void FixedUpdate()
+    {
+        Movement();
     }
 
     void ViewMovement() //视野移动
@@ -42,11 +47,11 @@ public class PlayerInput : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.W))
         {
-            rb.AddForce(tankDirection.transform.forward * (1000*speed),ForceMode.Force);
+            rb.AddForce(tankDirection.transform.forward * (8000*speed),ForceMode.Force);
         }
         if (Input.GetKey(KeyCode.S))
         {
-            rb.AddForce(-tankDirection.transform.forward * (1000*speed),ForceMode.Force);
+            rb.AddForce(-tankDirection.transform.forward * (8000*speed),ForceMode.Force);
         }
 
         _horizontalRot += Input.GetAxis("Horizontal")*rotspeed;
@@ -58,6 +63,21 @@ public class PlayerInput : MonoBehaviour
         if (Input.GetMouseButtonDown(0))
         {
             OnFire?.Invoke();
+        }
+    }
+
+    void Pause()
+    {
+        if(Input.GetKeyDown(KeyCode.P))
+        {
+            if (PauseMenu.instance.pause == false)
+            {
+                PauseMenu.instance.OnPause();
+            }
+            else if (PauseMenu.instance.death == false)
+            {
+                PauseMenu.instance.OffPause();
+            }
         }
     }
 }

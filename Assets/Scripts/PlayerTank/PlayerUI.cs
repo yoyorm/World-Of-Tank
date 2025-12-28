@@ -17,7 +17,7 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        shootInterval.value = _weaponControl.timeCount;
+        shootInterval.value = _weaponControl.timeCount/_weaponControl.shootTime;
         hp.value=_tank.currentHealth/(float)_tank.maxHealth;
     }
 }

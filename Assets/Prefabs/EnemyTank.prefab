@@ -836,7 +836,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cameraTransform: {fileID: 2686100645292374879}
   Direction: {x: 0, y: 0, z: 0}
-  AimRange: 25
+  AimRange: 22
   FireRange: 20
   FireInterval: 3
   timer: 0
@@ -855,6 +855,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MoveSpeed: 1
   MoveTime: 3
+  RandomRange: 1
 --- !u!114 &1323167889023134856
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -867,8 +868,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c336bfaca9958784e8687d2233f610ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MoveSpeed: 1
-  MoveTime: 3
+  MoveSpeed: 1.5
+  MoveTime: 4
+  RandomRange: 1
 --- !u!114 &5130193662061578952
 MonoBehaviour:
   m_ObjectHideFlags: 0
