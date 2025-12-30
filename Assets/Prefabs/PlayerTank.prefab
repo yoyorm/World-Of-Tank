@@ -128,6 +128,7 @@ GameObject:
   - component: {fileID: 1757248859622447411}
   - component: {fileID: 8435104869266307035}
   - component: {fileID: 9164393809954566474}
+  - component: {fileID: 2361973707292919619}
   m_Layer: 6
   m_Name: platform
   m_TagString: Untagged
@@ -217,6 +218,27 @@ MonoBehaviour:
   playerCamera: {fileID: 2686100645292374879}
   connon: {fileID: 4707315220664884994}
   FireDirection: {fileID: 246671949312299106}
+--- !u!65 &2361973707292919619
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2164104840155341571}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.003, y: 0.003, z: 0.02}
+  m_Center: {x: -4.656613e-10, y: 0.006, z: 0.008}
 --- !u!1 &4440115737284242634
 GameObject:
   m_ObjectHideFlags: 0
@@ -527,7 +549,7 @@ MonoBehaviour:
   playerCamera: {fileID: 1233441759259109198}
   tankDirection: {fileID: 7129558278269318837}
   speed: 1.6
-  rotspeed: 0.8
+  rotspeed: 1
 --- !u!114 &1009442297404142036
 MonoBehaviour:
   m_ObjectHideFlags: 0
