@@ -25,7 +25,17 @@ public class Tank : MonoBehaviour
     void Death()
     {
         if (currentHealth <= 0)
+        {
+            if (gameObject.layer == 7)
+            {
+                Score.instance.AddScore(1);
+                
+            }
+            Debug.Log("击败敌人");
             Destroy(this.gameObject);
+            
+            
+        }
     }
     
 }

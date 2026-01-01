@@ -12,11 +12,11 @@ public class GameState : MonoBehaviour
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<Tank>();
-        
+        Score.instance.ResetScore();
         
     }
 
-    // Update is called once per frame
+    
     void Update()
     {
         if (player.currentHealth<=0&&gameOver==false)

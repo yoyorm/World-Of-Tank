@@ -55,6 +55,7 @@ public class PauseMenu : MonoBehaviour
     {
         SceneManager.LoadScene("MainMenu");
         Time.timeScale = 1;
+        DataManager.instance.SaveBestScore();
     }
 
     public void OnPlayerDeath()
