@@ -9,9 +9,16 @@
 
 
 ---
+# 制作总结导图
 
 ![制作导图](https://github.com/yoyorm/World-Of-Tank/blob/main/doc/tankprogram.png)
 
+# 游戏主界面
+![](https://github.com/yoyorm/World-Of-Tank/blob/main/doc/menu.png)
+
+# 游玩界面
+![](https://github.com/yoyorm/World-Of-Tank/blob/main/doc/battle1.png)
+![](doc/battle2.png)
 ---
 
 
